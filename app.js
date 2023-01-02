@@ -124,3 +124,44 @@ class Calculator {
     calculator.delete()
     calculator.updateDisplay()
   })
+
+document.addEventListener('keydown', function(event) {
+    if (event.key == 1) {
+      calculator.appendNumber(1)
+    } else if (event.key == 2) {
+      calculator.appendNumber(2)
+    } else if (event.key == 3) {
+      calculator.appendNumber(3)
+    } else if (event.key == 4) {
+      calculator.appendNumber(4)
+    } else if (event.key == 5) {
+      calculator.appendNumber(5)
+    } else if (event.key == 6) {
+      calculator.appendNumber(6)
+    } else if (event.key == 7) {
+      calculator.appendNumber(7)
+    } else if (event.key == 8) {
+      calculator.appendNumber(8)
+    } else if (event.key == 9) {
+      calculator.appendNumber(9)
+    } else if (event.key == 0) {
+      calculator.appendNumber(0)
+    } else if (event.key == '.') {
+      calculator.appendNumber('.')
+    } else if (event.key == '+') {
+      calculator.chooseOperation('+')
+    } else if (event.key == '-') {
+      calculator.chooseOperation('-')
+    } else if (event.key == '*') {
+      calculator.chooseOperation('*')
+    } else if (event.key == '/') {
+      calculator.chooseOperation('÷')
+    } else if (event.key == 'Enter') {
+      calculator.compute()
+    } else if (event.key == 'Backspace') {
+      calculator.delete()
+    } else if (event.key == 'Escape') {
+      calculator.clear()
+    }
+    calculator.updateDisplay()
+})
