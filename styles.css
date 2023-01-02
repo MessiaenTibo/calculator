@@ -8,20 +8,26 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #00AAFF, #00FF6C);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .calculator-grid{
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    height: 620px;
+    width: 400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 60px);
+
 }
 
 .calculator-grid > button{
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.2rem;
     border: 1px solid white;
     outline: none;
     background-color: rgba(255, 255, 255, 0.75);
@@ -30,6 +36,29 @@ body {
 .calculator-grid > button:hover{
     background-color: rgba(255, 255, 255, 0.9);
 }
+
+/* media query */
+@media (min-width: 400px) {
+    .calculator-grid{
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    }
+    .calculator-grid > button{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .calculator-grid{
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    }
+    .calculator-grid > button{
+        font-size: 2.5rem;
+    }
+}
+
+
 
 .span-two{
     grid-column: span 2;
